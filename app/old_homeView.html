@@ -1,0 +1,45 @@
+<div ng-controller="ProductListCtrl as vm">
+    <div class="col-md-2 panel panel-primary" style="padding:0px">
+        <div class="panel-heading"
+             style="font-size:large">
+            Pivot Inputs
+        </div>
+        <div class="panel-body">
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="column" ng-model="column">
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="row" ng-model="row">
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="value" ng-model="value">
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="operation" ng-model="operation">
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="table" ng-model="table">
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="vm.submit(column, row, value, operation, table)">Submit</button>
+    </div>
+    <div class="col-md-10"
+         name="productForm">
+        <div class="panel panel-primary">
+            <div class="panel-heading"
+                 style="font-size:large">
+                Product List
+            </div>
+
+            <div class="panel-body">
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td ng-repeat="(key, value) in vm.products[0]">
+                                {{ key}}
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="product in vm.products">
+                            <td ng-repeat="(key, value) in product">
+                                {{ value}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

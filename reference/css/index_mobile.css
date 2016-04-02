@@ -1,0 +1,19 @@
+@media screen and (max-width:768px) {
+	.inner-wrapper
+	{
+		width:100%;
+		background:#777;
+	}
+	.logo-wrapper 
+	{
+		width:100%;
+		
+	}
+	.form-wrapper
+	{
+		float: right;
+		margin-right: 30px;
+		margin-left:0px;
+	}
+
+}

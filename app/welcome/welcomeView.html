@@ -1,0 +1,128 @@
+<div ng-controller="WelcomeCtrl as vm">
+            <style>
+                .logo-wrapper h1,.logo-wrapper  h2{
+                    color:#FFF;
+                    margin:0px;
+                }
+                .logo-wrapper{
+                    margin-top: 40px;
+                    position: relative;
+                    float: left;
+                    width: 400px;
+                }
+            </style>
+        <div class="container">
+            <div class="inner-wrapper">
+                <div class="logo-wrapper">
+                    <h1>Cube</h1><br>
+                    <h2>Collect Business intelligence</h2>
+                    <h2>Use Database seemlessly</h2>
+                </div>
+                <div class="form-wrapper">
+                            <div class="tabs">
+            <ul class="tabs-nav">
+                <li style="width: 98px;"><a href="#tab1">Sign Up</a></li>
+                <li style="width: 98px;"><a href="#tab2">Log In</a></li>
+            </ul>
+
+            <div class="clear"></div>
+            
+            <div class="tabs-container">
+                <div class="tab-content" id="tab1">
+                    <div class="input-wrapper">
+                        <input class="input" name="name" placeholder="Name" id="name" autocomplete="off"/>
+                    </div>
+                    <div class="input-wrapper">
+                        <input class="input" name="name" placeholder="Email" id="email" autocomplete="off"/>
+                    </div>
+                    <div class="input-wrapper">
+                        <input class="input" name="name" placeholder="Password" type="password" id="password" autocomplete="off"/>
+                    </div>
+                    <div class="input-wrapper fail" id="failr" style="display: none;">
+                        
+                    </div>
+                    <div class="input-wrapper">
+                        <button class="submit input" name="name" type="submit" onclick="register()">Sign Up</button>
+                    </div>
+                </div>
+    
+                <div class="tab-content" id="tab2" style="display: none">
+                        <div class="input-wrapper">
+                            <input class="input" name="email" id = "username" placeholder="Email"/>
+                        </div>
+                        <div class="input-wrapper">
+                            <input class="input" name="password" id="pass" type="password" placeholder="Password"/>
+                        </div>
+                        <div class="input-wrapper fail" id="fail" style="display:none;">
+                        </div>
+                        <br>
+                                        <a href='forgetpassword.php'>Forget password?</a>
+                        <div class="input-wrapper">
+                            <button class="submit input" type="submit" onclick="login()">Log In</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        
+<!-- /END middle_silver_background with icons -->
+<!-- BEGIN Slider -->
+    <div id="scroller">
+        <div class="items">
+            <a class="item" href="#"><img src="images/Slider/slide-1.png" alt="slide-1" /></a>
+            <a class="item" href="#"><img src="images/Slider/slide-2.png" alt="slide-2" /></a>
+            <a class="item" href="#"><img src="images/Slider/slide-3.png" alt="slide-3" /></a>
+        </div>
+    </div>
+<!-- /END Slider -->
+
+
+
+
+
+<!-- BEGIN footer -->
+<footer id="footer"> 
+  <div id="footer-wrapper">
+      <div class="footer-column">
+          <div class="widget"> 
+              <h5>CONTACT US</h5>
+              <ul>
+                <li>Founder Name: </li>
+                <li>Yi Lu</li>
+                <li>yl4px@virginia.edu</li>
+              </ul>
+          </div> 
+      </div>
+      
+      <div class="footer-column">
+          <div class="widget"> 
+              <h5>LATEST WORK</h5>
+              <ul>
+                <li><a href="http://www.meighbor.com">Meighbor.com</a></li>
+                <li>Meighbor.com is a new social network that connects people near you</li>
+              </ul>
+          </div> 
+      </div>
+  
+      <div class="footer-column last">
+          <div class="widget"> 
+              <h5>FOLLOW US</h5>
+              <div class="clear"></div>
+                <p>Keep in touch with us. Contact us if interested in our works</p>
+
+          </div>      
+      </div>
+  
+  <div class="footer-border padd-top15"></div>
+
+
+
+  <div class="clear"></div>
+
+    </div>
+
+ </footer>
+</div>

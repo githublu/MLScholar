@@ -1,0 +1,43 @@
+.tabledata
+{
+	min-width: 100px;
+}
+.x-scroll
+{
+	overflow-x: scroll;
+}
+.table-bordered > thead > tr > th
+{
+    border-bottom-width:0px;
+}
+.BuildDS thead:first-child > tr:first-child > .noborder
+{
+	border: 0px;
+}
+.BuildDS .noborder
+{
+	border: 0px;
+}
+.BuildDS thead:first-child > tr:first-child > th
+{
+	border: 1px solid #ddd;
+}
+.BuildDS table
+{
+	width: inherit; 
+    display:inline-block;
+	border: 0px;
+	vertical-align:top;
+}
+.BuildDS .dashboard
+{
+	padding: 15px;
+    overflow-x: auto;
+    white-space:nowrap;
+    vertical-align:top;
+}
+.BuildDS .topbtn
+{
+	width: 60px;
+	float:right;
+}

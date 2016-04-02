@@ -1,0 +1,53 @@
+.vote {
+	width: 38px;
+	float: right;
+	display: inline-block;
+	cursor: pointer;
+}
+.up {
+	margin-bottom: 10px;
+}
+.up, .down {
+	border: 1px solid #689ebf;
+	display: block;
+	color: #698ebf;
+	line-height: 16px;
+	width: 38px;
+	border-radius: 3px;
+	cursor: pointer;
+	background: #eff6fa;
+	font-weight: 600;
+	position: relative;
+}
+.voteup
+{
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #698ebf;
+	display: block;
+	margin: 4px 0px 4px 7px;
+}
+.votedown
+{
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #698ebf;
+	display: block;
+	margin: 4px 0px 4px 7px;
+}
+.answer_p
+{
+	width: 80%;
+}
+.nborder
+{
+	border:0px;
+}
+.nmargin
+{
+	margin:0px;
+}

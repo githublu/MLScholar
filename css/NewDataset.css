@@ -1,0 +1,27 @@
+.roundbtn {
+
+    background-color: transparent;
+    border: 1px solid #5cb85c;
+    text-align: center;
+    border-radius: 15%;
+    width: 152px;
+    height: 152px;
+    padding: 18px;
+}
+.roundbtn h3
+{
+    word-wrap: break-word;
+}
+.btn-file input[type=file]
+{
+	position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    text-align: right;
+    opacity: 0;
+    background: 0 0;
+    cursor: inherit;
+    display: block;
+}

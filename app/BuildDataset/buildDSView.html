@@ -1,0 +1,76 @@
+  <link href="css/BuildDS.css" rel="stylesheet" type="text/css" />
+  <script src="app/BuildDataset/BuildDS.js"></script>
+<div ng-controller="BuildDSCtrl as vm" class="BuildDS">
+  <!-- Start of Nav bar -->
+<div ng-include="'app/module/navbar.html'"></div>
+  <!-- Start of Nav bar -->
+
+<!-- Start of the display -->
+  <div class="row col-md-12">
+    <center>
+      <h3 style="display: inline-block;">Build a new Dataset</h3>
+      <button type="button" class="btn btn-primary" style="float:right; margin-left: 20px;" onclick="gotoview()">Preview</button>
+      <button type="button" class="btn btn-default" style="float:right;" onclick="backtohome()">Back</button>
+    </center>
+    <div class="row x-scroll dashboard">
+    <center>
+        <table class="table table-bordered"> 
+          <div class="clear-20"></div>
+          <thead> <tr> <th>Table 1</th> <th>Table heading</th> <th>Table heading</th> <th>Table heading</th> </tr> 
+          </thead>
+
+          <tbody> 
+          <tr>
+            <th class="info">DataSet1: </th> 
+            <td class="tabledata">Column 1</td> 
+            <td class="tabledata">Column 2</td> 
+            <td class="tabledata">Column 3</td>
+            <td class="tabledata">+</td> 
+            
+          </tr>
+          <tr>
+            <th class="info">DataSet2: </th> 
+            <td class="tabledata">Column 1</td> 
+            <td class="tabledata">Column 2</td> 
+            <td class="tabledata">+</td> 
+
+          </tr>
+          <tr>
+            <td>+</td> 
+            </tr>
+        </tbody> 
+      </table>
+
+      <!-- relations -->
+      <table class="table table-bordered"> 
+      <th class="tabledata success">T1.c1 = T2.c1 </th>
+      </table>
+
+        <table class="table table-bordered"> 
+          <thead> <tr> <th>Table 2</th> <th>Table heading</th> <th>Table heading</th> <th>Table heading</th> </tr> 
+          </thead>
+
+          <tbody> 
+          <tr>
+            <th class="info">DataSet1: </th> 
+            <td class="tabledata">Column 1</td> 
+            <td class="tabledata">Column 2</td> 
+            <td class="tabledata">Column 3</td>
+            <td class="tabledata">+</td> 
+          </tr>
+          <tr>
+            <td>+</td> 
+            </tr>
+        </tbody> 
+      </table> 
+
+      <!-- relations -->
+      <table class="table table-bordered"> 
+      <th class="tabledata warning">Add new table >></th>
+      </table>
+    </center>
+
+    </div>
+  </div>
+
+</div>

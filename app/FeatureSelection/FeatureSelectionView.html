@@ -1,0 +1,45 @@
+  <link href="css/ChooseFeature.css" rel="stylesheet" type="text/css" />
+<div ng-controller="FeatureSelectionCtrl" class="FeatureSelection">
+  <!-- Start of Nav bar -->
+<div ng-include="'app/module/navbar.html'"></div>
+  <!-- Start of Nav bar -->
+
+<!-- Start of the display -->
+  <div class="row col-md-12">
+    <center>
+      <h3 style="display: inline-block;">[Optional] Select Features that have to be included</h3>
+      <button type="button" class="btn btn-primary" style="float:right; margin-left: 20px;" ng-click = "GoToFeature()">Next</button>
+      <button type="button" class="btn btn-default" style="float:right;" ng-click="back()">Back</button>
+    </center>
+    <div class="row x-scroll dashboard">
+    <center>
+        <table class="table table-bordered"> 
+          <div class="clear-20"></div>
+          <thead> <tr> <th>Row#</th> <th id = "01" name="c1" ng-click="addFeature(1)">Table heading1</th> <th id = "02" name="c2" ng-click="addFeature(2)">Table heading2</th> <th class = "success" id = "03" name="c3" ng-click="addFeature(3)">Table heading3</th> </tr> 
+          </thead>
+
+          <tbody> 
+          <tr>
+            <th>1</th> 
+            <td class="tabledata" id="11" name="c1">Column 1</td> 
+            <td class="tabledata" id="12" name="c2">Column 2</td> 
+            <td class="tabledata success" id="13" name="c3">Column 3</td>
+            
+          </tr>
+          <tr>
+            <th>2</th> 
+            <td class="tabledata" id="21" name="c1">Column 1</td>
+            <td class="tabledata" id="22" name="c2">Column 2</td> 
+            <td class="tabledata success" id="23" name="c3">Column 3</td>
+
+          </tr>
+          <tr>
+            </tr>
+        </tbody> 
+      </table>
+    </center>
+
+    </div>
+  </div>
+
+</div>

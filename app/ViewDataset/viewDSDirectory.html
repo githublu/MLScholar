@@ -1,0 +1,18 @@
+<div class="modal fade" id="modalPopUp" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>Dataset Distribution</span>
+             </div>
+             <div class="modal-body-PopUp">
+                    <select name="columns" id="columnsSelect" ng-model="columns">
+                      <option ng-repeat="col in datasetcol" value="{{col}}">{{col}}</option>
+                    </select>
+                    <img src="images\DatasetDist\set1-c1.png"/>
+             </div>       
+            <div class="modal-footer">
+                <button type="button" id="btnClose" class="btn btn-primary" data-dismiss="modal">CANCEL</button>
+            </div>
+        </div>
+    </div>
+</div>

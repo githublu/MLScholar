@@ -8,6 +8,9 @@
     function BuildDSCtrl(productResource) {
         var vm = this;
         vm.url = "app/BuildDataset/dataset.html";
+        vm.backtohome1 = function () {
+            alert("123");
+        }
         // productResource.query(function (data) {
         //     vm.products = data[0].table;
         //     console.log(data[0]);

@@ -39,8 +39,12 @@
     //       //    }
     //       //});
     // });
-
 // there might need to bind to the login page
+    // app.controller("appCtrl",
+    //                  ['$scope', appCtrl]);
+    // function appCtrl($scope) {
+    //     $scope.userid = 1;
+    // }
 
     app.config(['$routeProvider',
         function($routeProvider) {
@@ -63,6 +67,15 @@
             })            
             .when('/welcome', {
               templateUrl: "app/welcome/welcomeView.html"
+            })
+            .when('/ChooseFeature', {
+              templateUrl: "app/ChooseFeature/ChooseFeatureView.html"
+            })
+            .when('/FeatureSelection', {
+              templateUrl: "app/FeatureSelection/FeatureSelectionView.html"
+            })
+            .when('/ModelSelection', {
+              templateUrl: "app/ModelSelection/ModelSelectionView.html"
             })
             .otherwise({
               redirectTo: '/welcome'

@@ -3,33 +3,20 @@
     angular
         .module("productManagement")
         .controller("ViewDSCtrl",
-                     [ViewDSCtrl]);
+                     ['$rootScope','$scope', ViewDSCtrl])
 
-    function ViewDSCtrl(productResource) {
-        var vm = this;
-        vm.url = "app/BuildDataset/dataset.html";
-        // productResource.query(function (data) {
-        //     vm.products = data[0].table;
-        //     console.log(data[0]);
-        // })
-        // //productResource.get({ id: 2 }, function (data) {
-        // //    vm.products = data;
-        // //});
-        // //vm.submit = function (query) {
-        // //    productResource.query({ sql: query }, function (data) {
-        // //        vm.products = data;
-        // //    });
+    function ViewDSCtrl($rootScope,$scope, productResource) {
+        //$scope.url = "app/BuildDataset/dataset.html";
+        $scope.show = function (datasetid) {
+            $rootScope.$broadcast('ShowDataDistribution', {datasetid:datasetid});
+        }
 
-        // //}
-        // vm.submit = function (column, row, value, operation, table) {
-        //     productResource.query({
-        //         column: column, row: row, value: value, operation: operation, table: table
-        //     }, function (data) {
-        //         vm.products = data[0].table;
-
-        //     });
-
-        // }
-
+        $scope.GoToFeature = function(datasetid)
+        {
+            window.location = "#/ChooseFeature?datasetid="+datasetid;
+        }
     }
+
+
+
 }());

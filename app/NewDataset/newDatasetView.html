@@ -1,85 +1,53 @@
-  <div ng-controller="NewDatasetCtrl as vm">
+        <script src="fileinput/js/fileinput.js" type="text/javascript"></script>
+        <script src="fileinput/js/fileinput_locale_fr.js" type="text/javascript"></script>
+        <script src="fileinput/js/fileinput_locale_es.js" type="text/javascript"></script>
+        <!-- <script src="fileinput/ng-file-upload-shim.min.js" type="text/javascript"></script>
+        <script src="fileinput/ng-file-upload.min.js" type="text/javascript"></script> -->
+        <link href="fileinput/css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+  <div ng-controller="NewDatasetCtrl">
   <!-- Start of Nav bar -->
     <div ng-include="'app/module/navbar.html'"></div>
-  <!-- Start of Nav bar -->
-<!-- Start of the display -->
-
-<!-- <div class="col-md-2">
-</div>
-<div class="col-md-10">
-asd
-</div>
-<div class="col-md-2">
-</div> -->
-
-
   <div class="col-md-2 col-md-offset-2">
     <center>
 
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <div class="kv-main">
+              <form enctype="multipart/form-data">
+                  <input id="file-0a" class="file" type="file" multiple data-min-file-count="1" file-model = "myFile">
+                  <br>
+                  <button type="submit" class="btn btn-primary" ng-click = "uploadFile()">Submit</button>
+                  <button type="reset" class="btn btn-default">Reset</button>
+              </form>
+            </div>
+          </div>
+<!--           <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
 
         <!-- Button trigger modal -->
-      <button type="button" class="roundbtn" data-toggle="modal" data-target="#upload">
+      <button type="button" class="roundbtn" data-toggle="modal" data-target="#myModal">
         <img src="Content/AddDashboard.png">
         <h3>Add New Table</h3>
       </button>
-          <!-- Modal add new file-->
-          <div class="modal fade" id="upload" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title" id="myModalLabel">Add New table from local directory</h4>
-                </div>
-                <div class="modal-body">
-                  <div>
-                    <div class="file-input">
-                      <div class="file-preview ">
-                      </div>
-                    <div class="input-group ">
-                       <div class="input-group-btn">
-                           <button type="button" tabindex="500" title="Clear selected files" class="btn btn-default fileinput-remove fileinput-remove-button"><i class="glyphicon glyphicon-trash"></i> <span class="hidden-xs">Remove</span></button>
-                           <button type="button" tabindex="500" title="Abort ongoing upload" class="btn btn-default hide fileinput-cancel fileinput-cancel-button"><i class="glyphicon glyphicon-ban-circle"></i> <span class="hidden-xs">Cancel</span></button>
-                           <button type="submit" tabindex="500" title="Upload selected files" class="btn btn-default fileinput-upload fileinput-upload-button"><i class="glyphicon glyphicon-upload"></i> <span class="hidden-xs">Upload</span></button>
-                           <div tabindex="500" class="btn btn-primary btn-file"><i class="glyphicon glyphicon-folder-open"></i> <span class="hidden-xs">Browse …</span><input id="input-25" name="input25[]" type="file" multiple="" class=""></div>
-                       </div>
-                    </div>
-                    </div>
-                  </div>
-                  <div> <!-- columes previews -->
-                          <div class="table-responsive"> 
-                            <table class="table table-bordered"> 
-
-                                <h3 style="float:left">Dataset Preview
-                                </h3>
-                                <div class="clear-20"></div>
-                                <tbody> 
-                                <td>Table cell </td> 
-                                <td>Table cell </td> 
-                                <td>Table cell </td> 
-                                </tr>
-                                <tr>
-                                <td>Table cell </td> 
-                                <td>Table cell </td> 
-                                <td>Table cell </td>  </tr>
-                              </tbody> 
-                            </table> 
-                          </div>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                  <button type="button" class="btn btn-primary">Upload and Save</button>
-                </div>
-              </div>
-            </div>
-          </div>
 
     </center> 
     <div class="clear-20"></div>
     <center>
       <div class="roundbtn">
         <img src="Content/AddDashboard.png">
-        <h3>Add From online</h3>
+        <h3>View My Models</h3>
       </div>
     </center> 
   </div>
@@ -90,7 +58,7 @@ asd
 
             <h3>Existing dataset
               <button type="button" class="btn btn-primary" style="float:right; margin-left: 20px;">View</button>
-              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#Share" style="float:right; margin-left: 20px;">Share</button>
+              <button type="button" class="btn btn-success" style="float:right; margin-left: 20px;"><a href="#/ChooseFeature">Start Machine Learning</a></button>
               <button type="button" class="btn btn-default" style="float:right;" onclick="backtohome()">Back</button>
             </h3>
             <div class="clear-20"></div>
@@ -108,23 +76,6 @@ asd
       </div>
 
     </center> 
-          <div class="modal fade" id="Share" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title" id="myModalLabel">Share Selected dataset with others</h4>
-                </div>
-                <div class="modal-body">
-                  Share links
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                  <button type="button" class="btn btn-primary">Share</button>
-                </div>
-              </div>
-            </div>
-          </div>
   </div>
   <div class="col-md-2">
   </div>
